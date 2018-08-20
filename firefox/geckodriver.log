@@ -1,0 +1,12 @@
+1534743647680	geckodriver	INFO	geckodriver 0.21.0
+1534743647689	geckodriver	INFO	Listening on 127.0.0.1:53560
+1534743647729	mozrunner::runner	INFO	Running command: "/usr/local/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qf59xWdEfT1y"
+1534743659752	Marionette	INFO	Listening on port 40172
+1534743660423	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.gzzbw.cn/js/lib/require.js, line 168: Error: Script error for "WdatePicker", needed by: trade
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: http://www.gzzbw.cn/js/lib/require.js, line 168: Error: Script error for "bootstrap", needed by: trade
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: http://www.gzzbw.cn/js/lib/require.js, line 168: Error: Script error for "knockout", needed by: trade, ko-amd-helpers, vm/tradeviewmodel, components/mainmenu, components/paginghandler
+http://requirejs.org/docs/errors.html#scripterror
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
