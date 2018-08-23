@@ -3,7 +3,7 @@ import ssl
 from lxml import etree
 
 
-ssl._create_default_https_context = ssl._create_unverified_context
+#ssl._create_default_https_context = ssl._create_unverified_context
 
 session = requests.Session()
 for id in range(0, 251, 25):

@@ -42,7 +42,6 @@ def gethtml(url):
     chrome_options.add_experimental_option("prefs",prefs)
     driver = webdriver.Chrome(chrome_options=chrome_options)
     driver.get(url)
-    print(driver.title)
     time.sleep(5)
     mm = driver.find_element_by_css_selector("[class='div_title text_view']")
     #xx = driver.find_element_by_css_selector("[class='div_title text_view']/a//span")
@@ -66,7 +65,6 @@ def gethtml1(url):
 
 myurls = [ 
     'http://www.gzzbw.cn/trade/?category=affiche',
-    'http://zzcg.ccgp.gov.cn/zbgg/index.jhtml',
 ] 
 
 
