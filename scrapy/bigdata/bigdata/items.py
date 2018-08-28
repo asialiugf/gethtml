@@ -11,4 +11,12 @@ import scrapy
 class BigdataItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    # for quotes
+    text   = scrapy.Field()
+    author = scrapy.Field()
+    tags   = scrapy.Field()
+    # for author table
+    #name = scrapy.Field()
+    #birthdate = scrapy.Field()
+    #bio = scrapy.Field()
     pass

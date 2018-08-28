@@ -17,22 +17,27 @@ NEWSPIDER_MODULE = 'bigdata.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
 
 
+# ----------------------- for splash configure -------------------------------
 #SPLASH_URL = 'http://121.199.28.62:8050'
 SPLASH_URL = 'http://localhost:8050'
-
 DOWNLOADER_MIDDLEWARES = {
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
-
 SPIDER_MIDDLEWARES = {
     'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
 }
-
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
-
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+
+# ----------------------- for mysql configure -------------------------------
+MYSQL_HOST = '160.19.212.226'
+MYSQL_DBNAME = 'scrapy'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = '123456'
+MYSQL_PORT = 3308
+# ----------------------- for mysql configure -------------------------------
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'bigdata (+http://www.yourdomain.com)'
@@ -86,6 +91,9 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'bigdata.pipelines.BigdataPipeline': 300,
 #}
+ITEM_PIPELINES = {
+    'bigdata.pipelines.BigdataPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

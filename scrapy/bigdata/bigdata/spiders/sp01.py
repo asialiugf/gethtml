@@ -24,6 +24,17 @@ class MySpider(scrapy.Spider):
         #print(response.body)
         #print(response.body.decode('UTF-8'))
         mm = response.xpath('//div[@class="BeltBar BeltBar2"]//dd')  # ok!!
+        for kk in mm:
+            print(kk.extract())
+            t0 = kk.xpath('a/text()')[0].extract()
+            print( t0 )
+            print("----------------")
+            yield {
+                'text': kk.xpath('a/text()')[0].extract(),
+                'author': kk.xpath('a/@href')[0].extract(),
+                'tags': "333",
+            }
+
         print(mm.extract())
         print(mm[0].extract())
         print(mm[1].extract())
@@ -40,5 +51,15 @@ class MySpider(scrapy.Spider):
         # response.body is a result of render.html call; it
         # contains HTML processed by a browser.
         # ...
+        '''
+        for quote in response.css('div.quote'):
+            yield {
+                'text': quote.css('span.text::text').extract_first(),
+                'author': quote.css('small.author::text').extract_first(),
+                'tags': ''.join(quote.css('div.tags a.tag::text').extract()),
+            }
+        '''
+
+
     def my_parse(self,response):
         mm = response.xpath('//div[@class="BeltBar BeltBar2"]//dd')  # ok!!
