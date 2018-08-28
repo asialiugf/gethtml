@@ -32,7 +32,7 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 
 # ----------------------- for mysql configure -------------------------------
-MYSQL_HOST = '160.19.212.226'
+MYSQL_HOST = '亦庄闲置ip'
 MYSQL_DBNAME = 'scrapy'
 MYSQL_USER = 'root'
 MYSQL_PASSWD = '123456'
