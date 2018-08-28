@@ -24,13 +24,15 @@ class QuotesSpider(scrapy.Spider):
                                and contains(@class,"accelem")]')
         '''
         print(mm.extract())
+        print(mm[0].extract())
+        print(mm[1].extract())
+        print(mm[2].extract())
+        print(mm[3].extract())
+        print(mm[4].extract())
 
-        print(response.xpath('.//div[@class="contentSubject fw accelem"]/div[@class="BeltBar BeltBar2"]/dl[1]/dd[@class="accbg"][1]/a[@class="leaidx"]'))
 
         print("0000000000000000000000000000000kkkkkkkkkkkkkkkk000000000000000000000000000")
-        '''
-        page = response.url.split("/")[-2]
-        filename = 'quotes-%s.html' % page
-        with open(filename, 'wb') as f:
-            f.write(response.body)
-        '''
+
+        
+    def parse_detail(self, response):
+        print(response.body)
