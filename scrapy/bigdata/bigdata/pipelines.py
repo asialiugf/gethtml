@@ -30,7 +30,7 @@ class BigdataPipeline(object):
                 author=pymysql.escape_string(item['author']),
                 tags=pymysql.escape_string(item['tags']))
             # spider.log(sqltext)
-            self.cursor.execute(sqltext)
+            # self.cursor.execute(sqltext)
 
         return item
 

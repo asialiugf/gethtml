@@ -29,13 +29,21 @@ class MySpider(scrapy.Spider):
             t0 = kk.xpath('a/text()')[0].extract()
             print( t0 )
             print("----------------")
+            '''
             yield {
                 'text': kk.xpath('a/text()')[0].extract(),
                 'author': kk.xpath('a/@href')[0].extract(),
                 'tags': "333",
             }
+            '''
 
-        print(mm.extract())
+        print("--------------------iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii------------------------------")
+        yy = response.xpath('//div[@class="BeltBar BeltBar2"]//dd//text()')  # ok!!
+        print(yy.extract())
+        uu = yy.extract()
+        print(' '.join(uu))
+        #print(uu)
+        print("--------------------iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii------------------------------")
         print(mm[0].extract())
         print(mm[1].extract())
         print(mm[2].extract())
